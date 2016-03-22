@@ -1,4 +1,4 @@
-# validate-reql
+# validate-reql  [![Build Status](https://travis-ci.org/tjmehta/validate-reql.svg)](https://travis-ci.org/tjmehta/validate-reql) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 allows validation of rethinkdb reql queries using a whitelist of reql validators. this was specifically designed to work w/ rethinkdb-primus.
 
 # Installation

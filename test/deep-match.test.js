@@ -1,3 +1,4 @@
+if (typeof Promise === 'undefined') require('es6-promise').polyfill()
 require('../lib/patch-rethinkdb')()
 
 var assert = require('assert')
@@ -7,7 +8,6 @@ var expect = require('chai').expect
 var equals = require('101/equals')
 var isObject = require('101/is-object')
 var isString = require('101/is-string')
-var not = require('101/not')
 var r = require('rethinkdb')
 
 var deepMatch = require('../lib/deep-match.js')
@@ -40,7 +40,7 @@ describe('deep-match tests', function () {
 
       acceptedQueries.forEach(function (query, i) {
         it('should deep match reql to reql ' + i, function (done) {
-          var ret = deepMatch(query, whitelist[i])
+          deepMatch(query, whitelist[i])
             .then(function (ret) {
               expect(ret).to.be.true
               done()
@@ -249,7 +249,7 @@ describe('deep-match tests', function () {
         it('should pass if validator returns true', function (done) {
           var reql1 = r.table('posts').insert({
             id: 1,
-            title: 'Lorem ipsum',
+            title: 'Lorem ipsum'
           })
           var reql2 = r
             .table('posts')
@@ -262,10 +262,10 @@ describe('deep-match tests', function () {
             .catch(done)
         })
 
-        it('should fail if opts validator returns false', function(done) {
+        it('should fail if opts validator returns false', function (done) {
           var reql1 = r.table('posts').insert({
             id: 1,
-            title: 'Lorem ipsum',
+            title: 'Lorem ipsum'
           }, { durable: true })
           var reql2 = r
             .table('posts')
@@ -301,10 +301,10 @@ describe('deep-match tests', function () {
             })
         })
 
-        it('should fail if opts validator throws err', function(done) {
+        it('should fail if opts validator throws err', function (done) {
           var reql1 = r.table('posts').insert({
             id: 1,
-            title: 'Lorem ipsum',
+            title: 'Lorem ipsum'
           }, { durable: true })
           var reql2 = r
             .table('posts')
@@ -347,7 +347,7 @@ describe('deep-match tests', function () {
             .table('posts')
             .insert({
               id: 1,
-              title: 'Lorem ipsum',
+              title: 'Lorem ipsum'
             }, { durable: true })
           var reql2 = r
             .table('posts')

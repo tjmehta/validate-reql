@@ -1,3 +1,4 @@
+if (typeof Promise === 'undefined') require('es6-promise').polyfill()
 require('../lib/patch-rethinkdb')()
 
 var expect = require('chai').expect
@@ -19,8 +20,6 @@ describe('validate-reql tests', function () {
   })
 
   it('should validate reql if reql matches', function (done) {
-    var self = this
-    var validateFn = sinon.stub().returns(true)
     var update = {}
     var updateOpts = {}
     var reql = r
@@ -40,7 +39,6 @@ describe('validate-reql tests', function () {
   })
 
   it('should validate reql using validator', function (done) {
-    var self = this
     var validateFn = sinon.stub().returns(true)
     var update = {}
     var updateOpts = {}
@@ -69,7 +67,6 @@ describe('validate-reql tests', function () {
   })
 
   it('should invalidate reql if opts mismatch', function (done) {
-    var self = this
     var validateFn = sinon.stub().returns(true)
     var update = {}
     var updateOpts = {}
@@ -96,8 +93,6 @@ describe('validate-reql tests', function () {
   })
 
   it('should invalidate reql if reql mismatch', function (done) {
-    var self = this
-    var validateFn = sinon.stub().returns(true)
     var update = {}
     var updateOpts = {}
     var reql = r
@@ -121,7 +116,6 @@ describe('validate-reql tests', function () {
   })
 
   it('should invalidate reql using validator (rejected w/ err)', function (done) {
-    var self = this
     var validateFn = sinon.stub().returns(false)
     var update = {}
     var updateOpts = {}
@@ -154,7 +148,6 @@ describe('validate-reql tests', function () {
   })
 
   it('should invalidate reql using validator (rejected w/ err)', function (done) {
-    var self = this
     var validateFn = sinon.stub().rejects(new Error('boom'))
     var update = {}
     var updateOpts = {}
