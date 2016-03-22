@@ -36,7 +36,7 @@ validateReql(reql, whitelist).catch(function (err) {
   console.log(err) // [ ValidationError: "query" mismatch ]
 })
 ```
-## Validate ReQL usng custom validation
+## Validate ReQL using custom validation
 rethinkdb-validator monkey patches rethinkdb w/ some new methods
 
 ### Example: Custom validation using refs: `r.rvRef` and `rvValidate`
