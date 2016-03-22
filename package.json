@@ -1,0 +1,49 @@
+{
+  "name": "validate-reql",
+  "version": "0.0.0",
+  "description": "allows validation of rethinkdb reql queries using a whitelist of reql validators. this was specifically designed to work w/ rethinkdb-primus.",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover _mocha ./test && istanbul --text check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
+    "test-watch": "nodemon -x mocha ./test",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjmehta/rethinkdb-validator.git"
+  },
+  "keywords": [
+    "rethinkdb",
+    "validator",
+    "whitelist",
+    "reql",
+    "query",
+    "validate"
+  ],
+  "author": "Tejesh Mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjmehta/rethinkdb-validator/issues"
+  },
+  "homepage": "https://github.com/tjmehta/rethinkdb-validator",
+  "devDependencies": {
+    "assert-args": "^1.1.0",
+    "callback-count": "^0.2.0",
+    "chai": "^3.5.0",
+    "es6-promise": "^3.1.2",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "rethinkdb": "^2.2.2",
+    "sinon": "^1.17.3",
+    "sinon-as-promised": "^4.0.0"
+  },
+  "peerDependencies": {
+    "rethinkdb": "^2.2.2"
+  },
+  "dependencies": {
+    "101": "^1.5.0",
+    "debug": "^2.2.0",
+    "deep-equal": "^1.0.1",
+    "object-loops": "^0.7.0"
+  }
+}
