@@ -63,7 +63,7 @@ validateReql(reql, whitelist).then(function () {
   // pass!
 }).catch(...)
 // Failure Cases
-var whitelist3 = [
+var whitelist2 = [
   r
   .table('hello')
   .insert(r.rvRef('update'), r.rvRef('updateRef'))
@@ -104,7 +104,7 @@ var whitelist = [
     return Promise.reject(new Error('boom')) // results in [ Error: boom ]
   }))
 ]
-validateReql(reql, whitelist2).catch(function (err) {
+validateReql(reql, whitelist).catch(function (err) {
   console.log(err) // scenarios outlined above
 })
 ```
