@@ -36,10 +36,10 @@ validateReql(reql, whitelist).catch(function (err) {
   console.log(err) // [ ValidationError: "query" mismatch ]
 })
 ```
-## Custom validation
+## Validate ReQL usng custom validation
 rethinkdb-validator monkey patches rethinkdb w/ some new methods
 
-### Custom validation using refs: `r.rvRef` and `rvValidate`
+### Example: Custom validation using refs: `r.rvRef` and `rvValidate`
 // Place `r.rvRef('<name>')` in place of ReQL you want to manually validate in your whitelist ReQL
 // Note: if the actual value from the ReQL is a sequence of ReQL you will have to test it as Rethink AST
 ```js
@@ -82,7 +82,7 @@ validateReql(reql, whitelist2).catch(function (err) {
 })
 ```
 
-### Custom validation using property tests
+### Example: Custom validation using property tests
 // Place `r.rvTest(func)` in place of ReQL you want to manually validate inline in your whitelist ReQL
 ```js
 var validateReql = require('validate-reql')
