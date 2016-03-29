@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tjmehta/rethinkdb-validator.git"
+    "url": "https://github.com/tjmehta/validate-reql.git"
   },
   "keywords": [
     "rethinkdb",
@@ -23,9 +23,9 @@
   "author": "Tejesh Mehta",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tjmehta/rethinkdb-validator/issues"
+    "url": "https://github.com/tjmehta/validate-reql/issues"
   },
-  "homepage": "https://github.com/tjmehta/rethinkdb-validator",
+  "homepage": "https://github.com/tjmehta/validate-reql",
   "devDependencies": {
     "assert-args": "^1.1.0",
     "callback-count": "^0.2.0",
