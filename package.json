@@ -1,6 +1,6 @@
 {
   "name": "validate-reql",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "allows validation of rethinkdb reql queries using a whitelist of reql validators. this was specifically designed to work w/ rethinkdb-primus.",
   "main": "index.js",
   "scripts": {
