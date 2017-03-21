@@ -35,7 +35,7 @@
     "mocha": "^3.2.0",
     "rethinkdb": "^2.2.2",
     "sinon": "^1.17.3",
-    "sinon-as-promised": "^4.0.0"
+    "sinon-as-promised": "^4.0.3"
   },
   "peerDependencies": {
     "rethinkdb": "^2.2.2"
