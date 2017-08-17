@@ -34,7 +34,7 @@
     "istanbul": "^0.4.2",
     "mocha": "^3.2.0",
     "rethinkdb": "^2.2.2",
-    "sinon": "^1.17.3",
+    "sinon": "^3.2.1",
     "sinon-as-promised": "^4.0.0"
   },
   "peerDependencies": {
